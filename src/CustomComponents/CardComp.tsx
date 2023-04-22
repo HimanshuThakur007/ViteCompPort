@@ -1,21 +1,20 @@
 import React from 'react'
-
-interface CardComp{
-    title: string,
-    text: string,
-
-}
-
-export const CardComp = ({title, text}: CardComp) => {
-    
+import './Cardstyle.css';
+import {FaArrowCircleRight} from 'react-icons/fa'
+export const CardComp = ({title, text}: any) => {
+    let iconStyle = {color:'Tomato'}
   return (
    <>
-   <div className='card w-100'>
+   <div className='card w-100 cardStyle' style={{borderRadius:'20px'}}>
+  
   <div className="card-body">
-    <h5 className="card-title">{title}</h5>
-    <p className="card-text">{text}</p>
+    <h2 className="card-title titleStyle" style={{margin: '0 0 32px'}}>{title}</h2>
+    <p className="card-text" style={{fontSize:'1.2rem'}}>{text}</p>
     {/* <a href="#" className="btn btn-primary">Button</a> */}
   </div>
+    <div className='d-flex justify-content-end'>
+      <button className='btn'><FaArrowCircleRight size={40} style={iconStyle}/></button>
+      </div>
   </div>
    
    </>

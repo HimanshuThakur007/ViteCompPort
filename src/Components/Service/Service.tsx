@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../../CustomComponents/Header'
+import Header from '../../CustomComponents/Banner'
 import ServicesModal from '../Modals/ServicesModal'
 import ServiceCard from '../../CustomComponents/ServiceCard';
 
@@ -60,9 +60,9 @@ This type of connection is usually preferred by organizations having multiple of
  Some of the areas where point to point communication is used are:'
 Close='close'
 />
-     <section id="services" className="services section-bg mt-4">
+     <section id="services" className="services section-bg">
       <div className="container" data-aos="fade-up">
-        <div className="section-title">
+        <div className="section-title mt-3">
           <h2>Services</h2>
           <p>Every company is unique and to survive today’s business scenario conventional ideas and technology isn’t sufficient anymore. Innovation is the driving force that can help a company achieve market leadership and leverage its potential. At Excellent Softwares we help companies formulate new strategies, reach new markets, generate better ROI and optimize ongoing processes. Our attitude to walk on the path less visited, love for technology and global perspective makes our approach infallible. 
             We provide a wide range of technological solutions to meet the demands of modern day business.</p>

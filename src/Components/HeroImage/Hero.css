@@ -1,0 +1,20 @@
+.page-header.dc-one {
+    background-image: url(../../Images/bg-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 100%;
+}
+
+.full-height {
+    min-height: 100vh;
+}
+.page-header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.section-padding {
+    padding: 100px 0px;
+}

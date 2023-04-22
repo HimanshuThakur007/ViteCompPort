@@ -1,15 +1,12 @@
 import React from 'react';
-import Header from '../../CustomComponents/Header';
-import { CardComp } from '../../CustomComponents/CardComp';
-import { InputField } from '../../CustomComponents/InputField';
-import { Button } from '../../CustomComponents/Button';
 import NavBar from '../NavBar/NavBar';
-import {Container,Row,Col} from 'react-bootstrap';
-import { InputField2 } from '../../CustomComponents/InputField';
 import HeroImage from '../HeroImage/HeroImage';
 import ClientSection from '../CllientSection/ClientSection';
 import WhyUs from '../WhyUs/WhyUs';
-import SkillSection from '../SkillSections/SkillSection';
+import ProductShowCase from '../ProductShowCase/ProductShowCase';
+import Banner from '../../CustomComponents/Banner';
+import Testimonial from '../Testimonial/Testimonial';
+import TestimonialCard from '../TestimonialCard/TestimonialCard';
 
 
 
@@ -17,11 +14,23 @@ const Home = () => {
     return (
         <>
          <NavBar/>
+         {/* <div className='col-12'>
+         <Banner/>
+         </div> */}
          <HeroImage/>
+         {/* <WhyUs/> */}
+         <div className='container'>
+         <ProductShowCase/>
+         
+         </div>
+    
          <ClientSection/>
-         <WhyUs/>
-         <SkillSection/>
-            
+    
+         <div className='container'>
+         <TestimonialCard />
+{/* <Testimonial/> */}
+        
+         </div> 
         </>
     )
 }

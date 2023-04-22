@@ -1,0 +1,37 @@
+.cardStyle{
+    min-height: 65vh;
+    background: #fff;
+    box-shadow: 0 50px 100px rgba(0,0,0,.1);
+    padding: 15px;
+    margin-bottom: 56px
+}
+
+.titleStyle{
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 39px;
+    margin: 0 0 32px;
+    padding: 0;
+    word-wrap: break-word;
+    color: #003565!important;
+}
+.imageStyle{
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+    object-fit: contain;
+    background: linear-gradient(360deg,#005da4 0,#e46084 48.41%);
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,93,164,.1);
+    border-radius: 100px;
+    padding: 3px;
+}
+
+
+.customersSay p {
+    width: 650px;
+    max-width: 80%;
+    margin: 0 auto;
+    color: #989d9f;
+    font-size: 1.3rem;
+}

@@ -1,15 +1,18 @@
 import React from 'react'
-import Header from '../../CustomComponents/Header'
+import Header from '../../CustomComponents/Banner'
 import ServicesModal from '../Modals/ServicesModal'
-
+import { Button } from '../../CustomComponents/Button'
+import {MdLocationOn} from 'react-icons/md'
+import {AiOutlineMail} from 'react-icons/ai'
+import {BiPhoneCall} from 'react-icons/bi'
 
 const ContactUs = () => {
   return (
     <>
-     <section id="contact" className="contact mt-4">
+     <section id="contact" className="contact">
       <div className="container" data-aos="fade-up">
 
-        <div className="section-title">
+        <div className="section-title mt-3">
           <h2>Contact</h2>
           <p>Contact Us By Feeling The Form</p>
         </div>
@@ -19,7 +22,7 @@ const ContactUs = () => {
           <div className="col-lg-5 d-flex align-items-stretch">
             <div className="info">
               <div className="address">
-                <i className="bi bi-geo-alt"></i>
+                <i><MdLocationOn size={30}/></i>
                 <h4>Location:</h4>
                 <p>Unit No. 216, 2nd Floor, Tower - B,
                    The i-Thum, Plot No. A - 40, Sector - 62,
@@ -29,13 +32,13 @@ const ContactUs = () => {
               </div>
 
               <div className="email">
-                <i className="bi bi-envelope"></i>
+                <i><AiOutlineMail size={20}/></i>
                 <h4>Email:</h4>
                 <p> info@excellentsoftwares.com</p>
               </div>
 
               <div className="phone">
-                <i className="bi bi-phone"></i>
+                <i><BiPhoneCall size={20}/></i>
                 <h4>Call:</h4>
                 <p>09871749499</p>
                 <p></p>
@@ -50,20 +53,20 @@ const ContactUs = () => {
             <form action="forms/contact.php" method="post" role="form" className="php-email-form">
               <div className="row">
                 <div className="form-group col-md-6">
-                  <label htmlFor="name">Your Name</label>
+                  <label htmlFor="name"><b>Your Name</b></label>
                   <input type="text" name="name" className="form-control" id="name" required/>
                 </div>
                 <div className="form-group col-md-6">
-                  <label htmlFor="name">Your Email</label>
+                  <label htmlFor="name"><b>Your Email</b></label>
                   <input type="email" className="form-control" name="email" id="email" required/>
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="name">Subject</label>
+                <label htmlFor="name"><b>Subject</b></label>
                 <input type="text" className="form-control" name="subject" id="subject" required/>
               </div>
               <div className="form-group">
-                <label htmlFor="name">Message</label>
+                <label htmlFor="name"><b>Message</b></label>
                 <textarea className="form-control" name="message" rows={10} required></textarea>
               </div>
               <div className="my-3">
@@ -71,7 +74,9 @@ const ContactUs = () => {
                 <div className="error-message"></div>
                 <div className="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div className="text-center"><button type="submit">Send Message</button></div>
+              <div className="text-center">
+              <Button btnName='Send Message'/>
+              </div>
             </form>
           </div>
 

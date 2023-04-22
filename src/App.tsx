@@ -11,6 +11,8 @@ import Enquiry from './Components/Enquiry/Enquiry';
 import ContactUs from './Components/ContactUs/ContactUs';
 import TeamSection from './Components/TeamSection/TeamSection';
 import Footer from './Components/Footer/Footer';
+import Header from './CustomComponents/Banner';
+import NavBarss from './Components/NavBar/NavBarss';
 
 
 
@@ -19,6 +21,8 @@ const App = () => {
     <div>
 <BrowserRouter>
 <NavBar/>
+{/* <NavBarss/> */}
+<main id="main">
 <Routes>
 {/* <Route path='/' element={<LayOut/>}> */}
 <Route path='/' element={<Home/>}/>
@@ -28,9 +32,10 @@ const App = () => {
 <Route path='/product' element={<Products/>}/>
 <Route path='/enquiry' element={<Enquiry/>}/>
 <Route path='/contactus' element={<ContactUs/>}/>
-<Route path='/team' element={<TeamSection/>}/>
+{/* <Route path='/team' element={<TeamSection/>}/> */}
 {/* </Route> */}
 </Routes>
+</main>
 <Footer/>
 
 </BrowserRouter>

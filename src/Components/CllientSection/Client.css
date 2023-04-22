@@ -1,0 +1,35 @@
+
+.clients h3 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 39px;
+    margin: 0 0 32px;
+    padding: 0;
+    word-wrap: break-word;
+    color: #003565!important;
+}
+
+.clients {
+    padding: 85px 0;
+    background: #fff;
+  }
+
+  .clients img {
+  max-width: 45%;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+  filter: grayscale(100);
+}
+
+.clients img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .clients img {
+    max-width: 40%;
+  }
+}
+ 

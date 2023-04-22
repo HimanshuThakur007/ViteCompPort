@@ -1,0 +1,121 @@
+.heading-wrapper {
+    margin-bottom: 30px;
+}
+
+
+
+
+.features-section .inner-row .col-lg-6:nth-child(2) {
+    margin-top: 80px;
+}
+
+.marginCard{
+    margin-top: -80px;
+}
+
+.gradient-heading-bg:before {
+    background: url(../../Images/half-circle-bg.png) no-repeat scroll bottom center;
+    background-size: cover;
+    content: "";
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.dark-bg {
+    background: #291fbc;
+}
+
+.gradient-heading-bg {
+    position: relative;
+}
+.section-padding {
+    padding: 100px 0px;
+}
+.style-dark {
+    color: #ffffff !important;
+}
+
+.heading-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+.style-dark h2{
+    color: #ffffff;
+}
+
+/* @media (max-width: 992px) {
+    .himanshu {
+      max-width: 60%;
+      margin: 0 auto 30px auto;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .himanshu {
+      max-width: 80%;
+      margin: 0 auto 30px auto;
+    }
+  } */
+  .col-lg-6.col-md-6.col-sm-6.himanshu{
+    margin-top: -80px;
+  }
+  
+  @media (max-width: 420px) {
+    .features-section .inner-row .col-lg-6:nth-child(2)  {
+     margin-top: -10px;
+    }
+    .col-lg-6.col-md-6.col-sm-6.himanshu {
+        margin-top: -10px;
+    }
+  }
+
+
+.style-dark h1, .style-dark h2, .style-dark h3, .style-dark h4, .style-dark h5 {
+    color: #ffffff !important;
+}
+.h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    /* color: var(--heading-text-color); */
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+}
+
+.lead-text, .lead-text p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.empty-space-60 {
+    height: 60px;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to bottom, #488fed 0%, #2a1fbc 100%);
+    box-shadow: 0px 0px 30px 0px rgba(42, 31, 188, 0.4);
+    background-size: auto 140%;
+    border: 0px;
+    color: #fff;
+    background-color: #007bff;
+    /* font-weight: 600; */
+}
+
+.btnn {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 0px 30px;
+    line-height: 48px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    outline: 0;
+}

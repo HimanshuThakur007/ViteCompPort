@@ -1,0 +1,16 @@
+.cardStyle{
+    min-height: 65vh;
+    background: #fff;
+    box-shadow: 0 50px 100px rgba(0,0,0,.1);
+    padding: 15px;
+    margin-bottom: 56px
+}
+
+.titleStyle{
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 39px;
+    padding: 0;
+    word-wrap: break-word;
+    color: #003565!important;
+}

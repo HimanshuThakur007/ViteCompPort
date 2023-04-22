@@ -1,61 +1,102 @@
 import React, { useState } from 'react';
 import {NavLink} from 'react-router-dom';
 import CloseBtn from '../Closebutton/CloseBtn';
+import {AiOutlineMenu} from 'react-icons/ai'
+import {GrFormClose} from 'react-icons/gr'
+import { Card, NavDropdown } from 'react-bootstrap';
+import './NavBar.css';
+import nb from '../../Images/excellent LOGO 30-03-2023.png'
 
 
 
 
 const NavBar = () => {
-    const [isNavCollapsed, setIsNavCollapsed]:any[] = useState(true);
-
-    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-    
-
+  const [isNavExpanded, setIsNavExpanded] = useState(false)
+  const [show, setShow]: any = useState(false)
+  const showHandler = ()=>{
+      setShow(!show)
+  }
+const navLinkStyle = ({ isActive}: any)=>{
+  return {
+    color: isActive ? '#2a1fbc' : '#4c5359',
+    textDecoration:'none'
+  }
+}
   return (
     <>
+
+<div>
+      <nav className="navigation">
+   <div className="col-lg-3 col-sm-12">
+    <NavLink to="/" className="brand-name">
+      <img src={nb} className='image-fluid' style={{width:'9vh'}}/>
+    </NavLink>
+    <button
+      className="hamburger"
+    
+      onClick={() => {
+        setIsNavExpanded(!isNavExpanded)
+      }}
+    >
+       {isNavExpanded == false ?<AiOutlineMenu />:<GrFormClose />} 
+      {/* hamburger svg code... */}
+    </button>
+
+   </div>
+    <div 
+      className={
+        isNavExpanded ? "navigation-menu expanded" : "navigation-menu col-lg-6 d-flex justify-content-around"
+      }
+    >
+
+      <ul>
+        
+        <li>
+          <NavLink style={navLinkStyle} to="/" onClick={()=>setIsNavExpanded(false)}>Home</NavLink>
+        </li>
+        <li >
+          <NavLink style={navLinkStyle} to="/product">Product</NavLink>
+          {/* <NavDropdown title="Product" id="basic-nav-dropdown">
+
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+       
+              
+              </NavDropdown>
+           */}
+        </li>
+        
+        <li>
+          <NavLink style={navLinkStyle} to="/about">About</NavLink>
+        </li>
+        
+        <li>
+          <NavLink style={navLinkStyle} to="/service">Services</NavLink>
+        </li>
+        <li>
+          <NavLink style={navLinkStyle} to="/contactus">Contact</NavLink>
+        </li>
+        <li>
+          <NavLink style={navLinkStyle} to="/enquiry">Enquiry</NavLink>
+        </li>
+        {/* <li>
+          <NavLink style={navLinkStyle} to="/team">Team</NavLink>
+        </li> */}
+       
+      </ul>
+      
+ </div>
+
+<div className='col-3'></div>
+    
+  </nav>
+
+  </div>
   
-
-  <header id="header" className="fixed-top header-scrolled">
-    <div className="container d-flex align-items-center">
-
-      <h1 className="logo me-auto"><a href="index.html">Es</a></h1>
-   
-    <a href="index.html" className="logo me-auto"><img src="assets/img/logo.png" alt="" className="img-fluid"/></a>
-
-      <nav id="navbar" className="navbar">
-        <ul>
-          <li><NavLink className="nav-link scrollto active" to="/">Home</NavLink></li>
-          <li><NavLink className="nav-link scrollto" to="/about">About</NavLink></li>
-          <li><NavLink className="nav-link scrollto" to="/service">Services</NavLink></li>
-          <li><a className="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
-          <li><NavLink className="nav-link scrollto" to="/team">Team</NavLink></li>
-          <li><NavLink className="nav-link scrollto" to="/product">Products</NavLink></li>
-          <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a className="nav-link scrollto" href="/contactus">Contact</a></li>
-          <li><a className="getstarted scrollto" href="#about">Get Started</a></li>
-        </ul>
-        <i className="bi bi-list mobile-nav-toggle">h</i>
-      </nav>
-
-    </div>
-  </header>
-
+ 
  
 
     
@@ -66,7 +107,7 @@ const NavBar = () => {
 export default NavBar
 
 
-{/* <div classNameName={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarSupportedContent"> */}
+{/* <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarSupportedContent"> */}
 
 {/* <button classNameName="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse} >
 <span classNameName="navbar-toggler-icon"></span>
