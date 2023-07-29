@@ -1,0 +1,118 @@
+.how-started {
+    background-color: #f1f5fe;
+}
+
+.sec-title {
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.sec-title:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sec-title .h1{
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 41px;
+    line-height: 56px;
+    font-family: open sans;
+    font-weight: lighter;
+    color: #000;
+}
+
+.sec-title p:last-child {
+    margin-bottom: 0;
+}
+.sec-title p:nth-child(2) {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.sec-title p {
+    display: inline-block;
+    line-height: 38px;
+    font-size: 21px;
+    color: #000;
+    max-width: 1064px;
+    font-family: "Poppins","Open Sans";
+    font-weight: 300;
+    font-style: normal;
+}
+
+.sec-title:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.how_it_start_section .how_it_start_ul {
+    display: flex;
+    max-width: 118.6rem;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 3rem auto 0rem;
+}
+
+.how_it_start_section .how_it_start_ul .how_it_start_li {
+    width: calc(100% / 4);
+    display: flex;
+    padding: 0 5rem 0rem 1rem;
+    border-right: 1px dotted #939393;
+}
+
+.how_it_start_section .how_it_start_ul .how_it_start_li .how_it_start_li_head {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 900;
+    color: #f74a1e;
+    font-family: open sans;
+}
+
+.how_it_start_section .how_it_start_ul .how_it_start_li .how_it_start_li_para {
+    font-size: 22px;
+    line-height: 29px;
+    font-weight: lighter;
+    margin-top: 0.4rem;
+}
+
+@media screen and (max-width: 480px){
+    .how_it_start_section .how_it_start_ul .how_it_start_li {
+        padding: 0 1rem;
+    }
+    }
+
+@media screen and (max-width: 768px){
+.how_it_start_section {
+    padding-top: 0.5rem !important;
+}
+.how_it_start_section {
+    padding-top: 3rem;
+}
+.how_it_start_section .how_it_start_ul .how_it_start_li .how_it_start_li_para {
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.row-start {
+    margin-top: 10px;
+}
+}
+
+@media screen and (max-width: 1099px){
+.how_it_start_section .how_it_start_ul .how_it_start_li {
+    width: calc(100% / 2);
+    display: block;
+    margin: 1rem 0rem;
+    border-right: none;
+    border-left: 1px dotted #939393;
+    padding: 0 2.1rem;
+}
+}

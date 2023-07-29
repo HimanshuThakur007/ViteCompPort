@@ -1,18 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Nav.css'
+import { NavLink } from 'react-router-dom';
+import nb from '../../Images/excellent LOGO 30-03-2023.png';
+import busy from '../../Images/team/busy logo.png';
+import nimg from '../../Images/home/navimg.png'
+import {MdArrowDropDown} from 'react-icons/md'
 
 const NavBarss = () => {
+
+const [show, setShow]= useState(false);
+const [isCollapse, setIsCollapse ]:any = useState(false)
+const [isProduct, setIsProduct]:any = useState(false)
+
+const productCollapse=()=>{
+    setIsProduct(!isProduct)
+}
+
+const navBarOpen =()=>{
+    setShow(!show)
+}
+
+const collapseShow = ()=>{
+    setIsCollapse(!isCollapse)
+    console.log(isCollapse)
+}
+
+const navLinkStyle = ({ isActive}: any)=>{
+    return {
+      color: isActive ? '#2a1fbc' : '#111111',
+      textDecoration:'none'
+    }
+  }
+
+  const reloadHandler = ()=>{
+    window.location.href = location.href
+  }
+
+
+
   return (
     <>
-    <header id="master-head" className="navbar menu-absolute menu-center">
-                <div className="container-fluid">
-                    <div id="main-logo" className="logo-container">
-                        <a className="logo" href="index-standard.html">
-                            <img src="images/d-code-logo-dark.svg" className="logo-dark" alt="DCode"/>
-                            <img src="images/d-code-logo-light.svg" className="logo-light" alt="DCode"/>
-                        </a>
+  <header id="master-head" className="navbar menu-center menu-fixed">
+                <div className="col-lg-12 col-9 d-flex">
+                    <div id="main-logo" className="col-lg-3 col-12 logo-container">
+                        <NavLink className="logo" to="/">
+                            <img src={nb} className="ms-5 logo-dark" alt="DCode"/>
+                            
+                            {/* <img src={nb} className="logo-light" alt="DCode"/> */}
+                        </NavLink>
                     </div>
-                    <div className="menu-toggle-btn">
+                    <div className="menu-toggle-btn ms-4 mt-3"  onClick={navBarOpen}>
                         {/* <!-- Mobile menu toggle--> */}
                         <a className="navbar-toggle">
                             <div className="burger-lines">
@@ -20,186 +57,106 @@ const NavBarss = () => {
                         </a>
                         {/* <!-- End mobile menu toggle--> */}
                     </div>
-                    <div id="navigation" className="nav navbar-nav navbar-main"><span className="close-btn"></span>
+                    <div id="navigation" className={`${show ? "nav navbar-nav navbar-main open":'col-lg-7 nav navbar-nav navbar-main'}`}>
+                        {show == true ?(
+                    <span className='close-btn' onClick={()=>setShow(false)}></span>
+                    ):null}
                         <ul id="main-menu" className="menu-primary">
-                            <li className="menu-item menu-item-has-children active">
-                                <a href="index-standard.html">Home</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                <ul className="sub-menu">
-                                    <li className="menu-item active"><a href="index-standard.html">Standard Software</a></li>
-                                    <li className="menu-item"><a href="index-crm.html">CRM software</a></li>
-                                    <li className="menu-item"><a href="index-security-software.html">Security Software</a></li>
-                                    <li className="menu-item"><a href="index-payment-software.html">Payment Software</a></li>
-                                    <li className="menu-item"><a href="index-erp-software.html">ERP Systems</a></li>
-                                    <li className="menu-item"><a href="index-digital-marketing.html">Digital Marketing</a></li>
-                                    <li className="menu-item"><a href="index-ai-chatbot-software.html">AI Chatbot Software</a></li>
-                                    <li className="menu-item"><a href="index-lms-software.html">LMS Software</a></li>
-                                    <li className="menu-item"><a href="index-email-marketing.html">Email Marketing <span className="badge badge-danger rounded">New</span></a></li>
-                                </ul>
-                            </li>
-                            <li className="menu-item menu-item-has-children">
-                                <a href="#">Pages</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                <ul className="sub-menu">
-                                    <li className="menu-item menu-item-has-children">
-                                        <a href="#">About Us</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                        <ul className="sub-menu">
-                                            <li className="menu-item">
-                                                <a href="page-aboutus.html">About Us</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a href="page-aboutus-two.html">About Us Two</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a href="page-aboutus-three.html">About Us Three <span className="badge badge-danger rounded">New</span></a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="page-services.html">Services</a>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="page-career.html">Careers</a>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="page-job-details.html">Job Details</a>
-                                    </li>
-                                    <li className="menu-item menu-item-has-children">
-                                        <a href="#">Contact Us</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                        <ul className="sub-menu">
-                                            <li className="menu-item">
-                                                <a href="page-contactus.html">Contact Us</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a href="page-contactus-two.html">Contact Us Two</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a href="page-contactus-three.html">Contact Us Three <span className="badge badge-danger rounded">New</span></a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="menu-item menu-item-has-children">
-                                        <a href="#">Auth Pages</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                        <ul className="sub-menu">
-                                            <li className="menu-item">
-                                                <a target="_blank" href="page-signin.html">Login</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a target="_blank" href="page-signin-two.html">Login Two</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a target="_blank" href="page-signup.html">Register</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="page-404.html">404 (Not Found)</a>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="page-comingsoon.html" target="_blank">Coming Soon</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="menu-item menu-item-has-children">
-                                <a href="#">Blogs</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                <ul className="sub-menu">
-                                    <li className="menu-item menu-item-has-children">
-                                        <a href="#">Blog Standard</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                        <ul className="sub-menu">
-                                            <li className="menu-item">
-                                                <a href="page-blog-grid-3-col.html">Blog Grid (3 Col)</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a href="page-blog-grid-2-col.html">Blog Grid (2 Col)</a>
-                                            </li>
-                                            <li className="menu-item">
-                                                <a href="page-blog-with-sidebar.html">Blog with Sidebar</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="page-blog-details.html">Blog Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="menu-item menu-item-has-children">
-                                <a href="#">Elements</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                <ul className="sub-menu">
-                                    <li className="menu-item">
-                                        <a href="element-content-box.html">Content Boxes</a>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="element-pricing-tables.html">Pricing Tables</a>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="element-quotes-carousel.html">Quotes Carousel</a>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="element-counters-countdown.html">Counters &amp; Countdown</a>
-                                    </li>
-                                    <li className="menu-item">
-                                        <a href="element-tabs-accordions.html">Tabs &amp; Accordions</a>
-                                    </li>
-                                </ul>
+                            <li className="menu-item">
+                                <NavLink style={navLinkStyle} to="/">Home </NavLink>
+                                
+                              
                             </li>
                             <li className="menu-item menu-item-has-children mega-menu">
-                                <a href="#">Mega Menu</a><span className="child-link"><i className="fas fa-chevron-down"></i></span>
-                                <ul className="sub-menu mega-menu-inner">
+                                <a href="#">Products </a><span className={`${isProduct ?"child-link":'child-link active'}`} onClick={productCollapse}><i className="fas fa-chevron-down"></i></span>
+                                <ul className={`${isProduct?'':"sub-menu mega-menu-inner"}`}>
                                     <li className="menu-item col-title">
-                                        <a href="#">Layouts</a>
-                                        <ul className="sub-menu">
-                                            <li className="menu-item"><a href="index-standard.html">Standard Software</a></li>
-                                            <li className="menu-item"><a href="index-crm.html">CRM software</a></li>
-                                            <li className="menu-item"><a href="index-security-software.html">Security Software</a></li>
-                                            <li className="menu-item"><a href="index-payment-software.html">Payment Software</a></li>
-                                            <li className="menu-item"><a href="index-erp-software.html">ERP Systems</a></li>
-                                            <li className="menu-item"><a href="index-digital-marketing.html">Digital Marketing</a></li>
+                                        <a>Products</a>
+                                        <ul className={`${isProduct? '': "sub-menu"}`}>
+                                            <li className="menu-item" onClick={reloadHandler}><NavLink to="/erp">Excellent ERP</NavLink></li>
+                                            <li className="menu-item" onClick={reloadHandler}><NavLink to="/payroll">Excellent Pay</NavLink></li>
+                                            <li className="menu-item" onClick={reloadHandler}><NavLink to="/excsfa">Excellent SFA</NavLink></li>
+                                           
+                                            <li className="menu-item" onClick={reloadHandler}><NavLink to="/infoserve">InfoServe</NavLink></li>
                                         </ul>
                                     </li>
                                     <li className="menu-item col-title">
-                                        <a href="#">Inner Pages</a>
-                                        <ul className="sub-menu">
-                                            <li className="menu-item"><a href="page-aboutus.html">About Us</a></li>
-                                            <li className="menu-item"><a href="page-services.html">Services</a></li>
-                                            <li className="menu-item"><a href="page-contactus.html">Contact Us</a></li>
-                                            <li className="menu-item"><a href="page-404.html">404 (Not Found)</a></li>
-                                            <li className="menu-item"><a target="_blank" href="page-comingsoon.html">Coming Soon</a></li>
-                                            <li className="menu-item"><a target="_blank" href="page-signin-two.html">Login/Register</a></li>
+                                        <a>Addons</a>
+                                        <ul className={`${isProduct? '': "sub-menu"}`}>
+                                            <li className="menu-item" onClick={reloadHandler}><NavLink to="/clengine">Collection Engine</NavLink></li>
+                                        <li className="menu-item" onClick={reloadHandler}><NavLink to="/clplus">CL Plus</NavLink></li>
+                                            <li className="menu-item" onClick={reloadHandler}><NavLink to="/kartmanager">Kart Manager</NavLink></li>
+                                            <li className="menu-item" onClick={reloadHandler}><NavLink to="/b2g">Busy To Google</NavLink></li>
+                                            {/* <li className="menu-item" onClick={reloadHandler}><NavLink to="/aarath">Aarath</NavLink></li>
+                                            <li className="menu-item" onClick={reloadHandler}><NavLink to="/asset">Asset</NavLink></li> */}
                                         </ul>
                                     </li>
-                                    <li className="menu-item col-title">
-                                        <a href="#">Elements</a>
-                                        <ul className="sub-menu">
-                                            <li className="menu-item"><a href="element-content-box.html">Content Boxes</a></li>
-                                            <li className="menu-item"><a href="element-pricing-tables.html">Pricing Tables</a></li>
-                                            <li className="menu-item"><a href="element-quotes-carousel.html">Quotes Carousel</a></li>
-                                            <li className="menu-item"><a href="element-counters-countdown.html">Counters &amp; Countdown</a></li>
-                                            <li className="menu-item"><a href="element-tabs-accordions.html">Tabs &amp; Accordions</a></li>
-                                        </ul>
-                                    </li>
-                                    <li className="menu-item col-title">
-                                        <a href="#">Blog</a>
-                                        <ul className="sub-menu">
-                                            <li className="menu-item"><a href="page-blog-grid-3-col.html">Blog Grid (3 Col)</a></li>
-                                            <li className="menu-item"><a href="page-blog-grid-2-col.html">Blog Grid (2 Col)</a></li>
-                                            <li className="menu-item"><a href="page-blog-with-sidebar.html">Blog with Sidebar</a></li>
-                                            <li className="menu-item"><a href="page-blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
+                                    {/* -------------------------sideImage on navbar------------------------ */}
+                                    <li className="menu-item col-title d-lg-block d-none" style={{padding:'0px'}}>
+                                        <img className='' src={nimg} style={{width:'100%'}}/>
+                                        <h4 className='text-center'>Products</h4>
+                                        <p className='text-center'>Want to scale up your business? Now is the perfect time to start with the
+                                            best platform and finest idea to help you grow and succeed.</p>
+                                       </li>
                                 </ul>
                             </li>
+                            <li className="menu-item menu-item-has-children active">
+                                <a>Services</a><span className={`${isCollapse ?"child-link":'child-link active'}`} onClick={collapseShow}><i className="fas fa-chevron-down"></i></span>
+                                <ul className={`${isCollapse ? "":'sub-menu'}`}>
+                                <li onClick={reloadHandler} className="menu-item">
+                                        <NavLink  to="/customize_software" >Customized Software</NavLink>
+                                    </li>
+                                    <li onClick={reloadHandler} className="menu-item">
+                                        <NavLink  to="/consulting">Consulting</NavLink>
+                                    </li>
+                                    
+                                    <li onClick={reloadHandler} className="menu-item">
+                                        <NavLink  to="/saasapp" >Saas App Development</NavLink>
+                                    </li>
+                                    <li onClick={reloadHandler} className="menu-item">
+                                        <NavLink  to="/busycust" >Busy Customisation</NavLink>
+                                    </li>
+                                        
+                                    <li onClick={reloadHandler} className="menu-item">
+                                        <NavLink  to="/mobileapp">Mobile App Development</NavLink>
+                                    </li>
+                                    <li onClick={reloadHandler} className="menu-item">
+                                        <NavLink  to="/webapp">Web Development</NavLink>
+                                    </li>
+                                   
+                                  
+                                   
+                                    
+                                </ul>
+                            </li>
+
+                            <li className="menu-item">
+                                <NavLink style={navLinkStyle} to="/about">About</NavLink>
+                              
+                            </li>
+
+                            <li className="menu-item">
+                                <NavLink style={navLinkStyle} to="/enquiry_form">Enquiry</NavLink>
+                              
+                            </li>
+                            <li className="menu-item d-lg-none d-xl-none d-xxl-none d-flex">
+                            <NavLink className="logo ms-5" to="#">
+                            <img src={busy} className="ms-5 logo-dark" alt="DCode"/>
+                            
+                        </NavLink>
+                              
+                            </li>
+
                         </ul>
-                    <div className="navbar-right">
-                        <div className="menu-button">
-                            <a href="#" target="_blank">
-                                <div className="btn btn-outline-primary btn-light">sign in</div>
-                            </a>
-                        </div>
-                        <div className="search-option style-dark">
-                            <div className="search-btn">
-                                <a href="#"><i className="fas fa-search"></i></a>
-                            </div>
-                        </div>
-                    </div></div>
+                    </div>
+                    <div id="main-logo" className="col-lg-2 d-lg-flex d-none logo-container">
+                        <NavLink className="logo" to="#">
+                            <img src={busy} className="ms-5 logo-dark" alt="DCode"/>
+                            
+                        </NavLink>
+                    </div>
                     
+                   
                 </div>
             </header>
     </>

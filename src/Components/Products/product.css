@@ -1,23 +1,51 @@
 .heading-wrapper {
     margin-bottom: 30px;
 }
-
-
-
-
-.features-section .inner-row .col-lg-6:nth-child(2) {
-    margin-top: 80px;
+.section-padding {
+    padding: 100px 0px;
 }
 
-.marginCard{
+.heading-wrapper span{
+	font-family:'Alegreya', serif;
+	font-style:italic; 
+}
+
+.heading-wrapper span.sub-title{
+	text-transform: uppercase;
+	font-weight:700;
+	font-size: 18px;
+	letter-spacing:1px; 
+	font-family:'Source Sans Pro', sans-serif;
+	font-style:normal; 
+}
+.style-dark .heading-wrapper span{
+	color:#ffffff; 
+}
+.lead-text, .lead-text p{
+	font-size:20px;
+	line-height:1.6;  
+}
+
+
+
+
+.features-section .inner-row .col-lg-6:nth-child(2){
+	margin-top:80px; 
+}
+.features-section .inner-row .col-lg-6:nth-child(3){
+	margin-top:-80px; 
+}
+
+/* .marginCard{
     margin-top: -80px;
-}
+} */
 
 .gradient-heading-bg:before {
     background: url(../../Images/half-circle-bg.png) no-repeat scroll bottom center;
     background-size: cover;
     content: "";
-    height: 300px;
+    /* height: 300px; */
+    height: 260px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -31,7 +59,8 @@
     position: relative;
 }
 .section-padding {
-    padding: 100px 0px;
+    padding: 14px 0px;
+    /* padding: 100px 0px; */
 }
 .style-dark {
     color: #ffffff !important;
@@ -49,7 +78,7 @@
     color: #ffffff;
 }
 
-/* @media (max-width: 992px) {
+@media (max-width: 992px) {
     .himanshu {
       max-width: 60%;
       margin: 0 auto 30px auto;
@@ -61,7 +90,7 @@
       max-width: 80%;
       margin: 0 auto 30px auto;
     }
-  } */
+  }
   .col-lg-6.col-md-6.col-sm-6.himanshu{
     margin-top: -80px;
   }
@@ -73,6 +102,10 @@
     .col-lg-6.col-md-6.col-sm-6.himanshu {
         margin-top: -10px;
     }
+    .col-lg-6.col-md-6.col-sm-6.mycard {
+        margin-top: -31px;
+    }
+
   }
 
 
@@ -88,10 +121,7 @@
     margin-bottom: 18px;
 }
 
-.lead-text, .lead-text p {
-    font-size: 20px;
-    line-height: 1.6;
-}
+
 
 .empty-space-60 {
     height: 60px;
@@ -119,3 +149,7 @@
     transition: all 0.5s ease;
     outline: 0;
 }
+
+
+
+/* ---------------------------------------------------------------------- */

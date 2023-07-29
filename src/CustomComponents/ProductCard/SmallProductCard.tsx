@@ -1,7 +1,7 @@
 import React from 'react';
 import './styleproduct.css'
 
-const SmallProductCard = ({cardTitle,cardText,src,hstyle,tstyle}:any) => {
+const SmallProductCard = ({cardTitle,cardText,src,hstyle,tstyle,src2}:any) => {
   return (
     <>
 
@@ -9,6 +9,7 @@ const SmallProductCard = ({cardTitle,cardText,src,hstyle,tstyle}:any) => {
             <div className='inner-box'>
               <div className='icon'>
                  <img className='normal' src={src}/>
+                 <img className='hover' src={src2} />
               </div>
               <div className='text'>
                 <h4 className='h4'>{cardTitle}</h4>

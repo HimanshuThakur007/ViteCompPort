@@ -1,61 +1,54 @@
-import React from 'react';
-import { Button } from '../../CustomComponents/Button';
+import './style.css'
 
 const Contact = () => {
-    return (
-        <>
-            <section id="contact" className="contact">
-                <div className='benefits-section section-padding' style={{ backgroundColor: '#fff' }}>
-                    <div className='container'>
-                        <div className='row justify-content-center'>
-                            <div className='col-lg-8'>
-                                <div className='heading-wrapper text-center mt-2'>
-                                    <h2 style={{ color: '' }}>Connect <span style={{ fontFamily: 'serif', fontStyle: 'italic' ,color:'#2a1fbc' }}>with Us</span></h2>
-                                    <div className='lead-text'>
-                                        <p style={{ color: '' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores optio sapiente veniam quasi, asperiores, laudantium totam dicta placeat sed eveniet quaerat. Voluptatibus modi fugiat consequatur ratione harum ab mollitia commodi.</p>
-                                    </div>
-                                </div>
-                              
+  return (
+    <>
 
-                            </div>
-                            {/* <div className='row'> */}
-                            <div className="col-lg-12 mt-5 mt-lg-0 mb-4 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" className="php-email-form">
-              <div className="row">
-                <div className="form-group col-md-6">
-                  <label htmlFor="name"><b>Your Name</b></label>
-                  <input type="text" name="name" className="form-control" id="name" required/>
+      <section id="contact" className="contact">
+        <div className="st-indus-bx-8 common-box-padding">
+          <div className="wrapper">
+            <div className="common-form-style default-three-row">
+              <h2>Interested ?</h2>
+              <div className="subhead">Find the answer to your questions:</div>
+              <form method="post">
+                <div className="row">
+                  <div className="form-group col-md-6  mb-2">
+                    <label className='form-label'>First Name</label>
+                    <input type="text" className="form-control" id="FiratName" />
+                  </div>
+                  <div className="form-group col-md-6 mb-2">
+                  <label className='form-label'>Last Name</label>
+                    <input type="text" className="form-control" id="LastName" placeholder="" />
+                  </div>
                 </div>
-                <div className="form-group col-md-6">
-                  <label htmlFor="name"><b>Your Email</b></label>
-                  <input type="email" className="form-control" name="email" id="email" required/>
+                <div className="form-group mb-2">
+                <label className='form-label'>Email Address</label>
+                  <input type="email" className="form-control" id="email" placeholder="" />
                 </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="name"><b>Subject</b></label>
-                <input type="text" className="form-control" name="subject" id="subject" required/>
-              </div>
-              <div className="form-group">
-                <label htmlFor="name"><b>Message</b></label>
-                <textarea className="form-control" name="message" rows={10} required></textarea>
-              </div>
-              <div className="my-3">
-                <div className="loading">Loading</div>
-                <div className="error-message"></div>
-                <div className="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div className="text-center">
-              <Button btnName='Send Message'/>
-              </div>
-            </form>
+                {/* <div className="form-group">
+                  <input type="text" className="form-control" id="subject" placeholder="How can I help you?" />
+                </div> */}
+                <div className="form-group  mb-2">
+                <label className='form-label'>Message</label>
+                  <textarea className="form-control" id='textArea' rows={3} placeholder=""></textarea>
+                </div>
+                {/* <div className="form-group">
+                  <input type="submit" className="btn btn-primary" value="Submit" />
+                </div> */}
+              </form>
+                <div className="d-flex justify-content-center justify-content-lg-start mt-4">
+     
+        <a className='btnn btn-primary' href="mailto:`{email}`?subject={subject}&body={body}">Submit</a>
+       
+      
+      </div>
+            </div>
           </div>
-                            {/* </div> */}
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    )
+        </div>
+
+      </section>
+    </>
+  )
 }
 
 export default Contact

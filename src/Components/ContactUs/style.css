@@ -1,0 +1,58 @@
+.common-box-padding {
+    padding: 40px 0;
+}
+
+.st-indus-bx-8 {
+    /* background: #151515; */
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    width: 92%;
+}
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.common-form-style {
+    overflow: hidden;
+}
+
+
+.st-indus-bx-8 .common-form-style h2 {
+    font-weight: 700;
+    font-size: 50px;
+    /* color: #fff; */
+    color: black;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding-bottom: 20px;
+    /* color: #fff; */
+    color: black;
+}
+
+.common-form-style .subhead {
+    padding-bottom: 45px;
+    font-size: 18px;
+    /* color: #fff; */
+    color: black;
+}
+
+input#FiratName,input#LastName,input#email,input#subject,textarea#textArea {
+    border-bottom: 1px solid lightgrey;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+}
+
+
+
+
+

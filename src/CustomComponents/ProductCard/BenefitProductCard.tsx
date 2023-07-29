@@ -8,7 +8,7 @@ const BenefitProductCard = ({head, text}:any) => {
         <div className='inner-box'>
             <div className='text'>
                 <h4>{head}</h4>
-                <p>{text}</p>
+                <p >{text}</p>
             </div>
         </div>
 
@@ -17,4 +17,5 @@ const BenefitProductCard = ({head, text}:any) => {
   )
 }
 
-export default BenefitProductCard
+export default BenefitProductCard;
+// style={{textAlign:'justify'}}

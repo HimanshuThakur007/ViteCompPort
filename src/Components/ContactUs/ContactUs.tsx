@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../CustomComponents/Banner'
-import ServicesModal from '../Modals/ServicesModal'
+import ServicesModal from '../Modals/EnquiryModal'
 import { Button } from '../../CustomComponents/Button'
 import {MdLocationOn} from 'react-icons/md'
 import {AiOutlineMail} from 'react-icons/ai'
@@ -10,6 +10,21 @@ const ContactUs = () => {
   return (
     <>
      <section id="contact" className="contact">
+     <div className='inner-page-header section-padding style-dark'>
+      <div className="container" data-aos="fade-up">
+        <div className='page-title-inner text-center clearfix'>
+           <div className='heading-wrapper'>
+             <h1 className='h1'>Contact</h1>
+             <div className='lead-text'>
+              <p>What makes a great company? It's really easy. It's also the people that are working here.</p>
+             </div>
+           </div>
+
+        </div>
+       
+
+        </div>
+      </div>
       <div className="container" data-aos="fade-up">
 
         <div className="section-title mt-3">

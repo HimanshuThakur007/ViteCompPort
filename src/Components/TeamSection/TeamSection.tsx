@@ -1,9 +1,10 @@
 import React from 'react'
 import TeamCard from '../../CustomComponents/TeamCard';
-import t1 from '../../Images/team/team-1.jpg';
-import t2 from '../../Images/team/team-2.jpg';
+// import t1 from '../../Images/team/anil sir.png';
+import t1 from '../../Images/team/anilSir.jpg';
+import t2 from '../../Images/team/SanjeevSir.png';
 import t3 from '../../Images/team/team-3.jpg';
-import t4 from '../../Images/team/team-4.jpg';
+import t4 from '../../Images/team/amitSir.jpg';
 import { Carousel } from 'react-bootstrap';
 
 const TeamSection = () => {
@@ -24,22 +25,22 @@ const TeamSection = () => {
         <div className="row">
 
           <div className="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-            <TeamCard src={t1} name='Himanshu' position='CEO' about='CEO of my world' hreft="https://twitter.com/narendramodi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"/>
+            <TeamCard src={t1} name='Anil Yadav' position='CEO' about='CEO of Excellent Softwares' linkedIn='https://www.linkedin.com/in/anil-yadav-5a545727/?originalSubdomain=in' hreft="https://twitter.com/narendramodi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"/>
           </div>
 
           <div className="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <TeamCard src={t2} name='Atul' position='CEO' about='CEO of my world'/>
+          <TeamCard src={t2} name='Sanjeev Yadav' position='CEO' about='CEO of my world'/>
            
           </div>
 
           <div className="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
-          <TeamCard src={t3} name='Vivek' position='CEO' about='CEO of my world'/>
+          <TeamCard src={t3} name='Shailendra Pandey' position='Manager' about='CEO of my world'/>
       
            
           </div>
 
           <div className="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-          <TeamCard src={t4} name='Raja' position='CEO' about='CEO of my world'/>
+          <TeamCard src={t4} name='Amit Katyal' position='Sr.Software Engineer' about='developer'/>
           
           </div>
 
@@ -49,22 +50,30 @@ const TeamSection = () => {
         <div className="row">
 
           <div className="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-            <TeamCard src={t1} name='Himanshu' position='CEO' about='CEO of my owm world'/>
+            <TeamCard 
+            // src={} 
+            name='Narayan Kumar' position='CEO' about='CEO of my own world'/>
           </div>
 
           <div className="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <TeamCard src={t2} name='Atul' position='CEO' about='CEO of my owm world'/>
+          <TeamCard 
+          // src={} 
+          name='Hema Singh' position='Developer' about='CEO of my own world'/>
            
           </div>
 
           <div className="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
-          <TeamCard src={t3} name='Vivek' position='CEO' about='CEO of my owm world'/>
+          <TeamCard 
+          // src={} 
+          name='Ekta Singh' position='Developer' about='CEO of my own world'/>
       
            
           </div>
 
           <div className="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-          <TeamCard src={t4} name='Raja' position='CEO' about='CEO of my owm world'/>
+          <TeamCard 
+          // src={} 
+          name='Ashutosh Tewari' position='Accountant' about='CEO of my own world'/>
           
           </div>
 

@@ -76,15 +76,15 @@ const navLinkStyle = ({ isActive}: any)=>{
         <li>
           <NavLink style={navLinkStyle} to="/service">Services</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink style={navLinkStyle} to="/contactus">Contact</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink style={navLinkStyle} to="/enquiry">Enquiry</NavLink>
         </li>
-        {/* <li>
-          <NavLink style={navLinkStyle} to="/team">Team</NavLink>
-        </li> */}
+        <li>
+          <NavLink style={navLinkStyle} to="/blog">Blog</NavLink>
+        </li>
        
       </ul>
       

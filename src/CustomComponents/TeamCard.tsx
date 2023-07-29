@@ -4,7 +4,7 @@ import {FaFacebook} from 'react-icons/fa';
 import {AiFillInstagram} from 'react-icons/ai';
 import {AiFillLinkedin} from 'react-icons/ai'
 
-const TeamCard = ({src,name,position,about,hreft}:any) => {
+const TeamCard = ({src,name,position,about,hreft,linkedIn}:any) => {
   return (
     <>
     <div className="member d-flex align-items-start">
@@ -17,7 +17,7 @@ const TeamCard = ({src,name,position,about,hreft}:any) => {
                   <a href={hreft}><i className="ri-twitter-fill"><AiOutlineTwitter /></i></a>
                   <a href=""><i className="ri-facebook-fill"><FaFacebook /></i></a>
                   <a href=""><i className="ri-instagram-fill"><AiFillInstagram /></i></a>
-                  <a href=""> <i className="ri-linkedin-box-fill"><AiFillLinkedin /></i> </a>
+                  <a href={linkedIn}> <i className="ri-linkedin-box-fill"><AiFillLinkedin /></i> </a>
                 </div>
               </div>
             </div>
