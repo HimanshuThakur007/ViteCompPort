@@ -9,6 +9,7 @@ import c6 from '../../Images/Customized Software/Customer-Centric Approach.png'
 import c7 from '../../Images/Customized Software/Data Security.png'
 import c8 from '../../Images/Customized Software/Timely Delivery.png'
 import c9 from '../../Images/Customized Software/Reliable Support.png'
+import { Helmet } from 'react-helmet';
 
 const CustomizedSoftware = ({clickDownHandler}:any) => {
     let iconStyle = { color: '#2a1fbc' }
@@ -31,6 +32,10 @@ const CustomizedSoftware = ({clickDownHandler}:any) => {
 
             </div>
         </div> */}
+          <Helmet>
+                <title>Excellent softwares || Customized Software</title>
+                <meta name="Customized Software Page" content="Customized Software services page content" />
+            </Helmet>
         <section className="breadcrumbs webdev-breadcrumb" style={{padding: '60px 0', overflow:'hidden', marginTop:'2px'}}>
 <div className="container pos-r">
     <div className="banner-content">
@@ -47,9 +52,9 @@ const CustomizedSoftware = ({clickDownHandler}:any) => {
         <section className="next-gen-web">
 <div className="container">
     <div className="sec-title">
-        <h2 className="h1">Why Customized Software</h2>
+        <h2 className="h1">Why Customized Software?</h2>
         <p>Off-the-shelf software might seem convenient at first, but it often falls short in addressing the specific challenges and requirements of your business.</p>
-<p>we specialize in crafting tailor-made software solutions that cater to diverse industries. Our expertise spans web applications, mobile apps, enterprise software, and other bespoke solutions. With a dedicated team of skilled developers, designers, and project managers, we collaborate to deliver cutting-edge software, empowering your business to thrive in the digital era.</p>
+<p>We specialize in crafting tailor-made software solutions that cater to diverse industries. Our expertise spans web applications, mobile apps, enterprise software, and other bespoke solutions. With a dedicated team of skilled developers, designers, and project managers, we collaborate to deliver cutting-edge software, empowering your business to thrive in the digital era.</p>
         
     </div>
 </div>

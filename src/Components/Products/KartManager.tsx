@@ -10,18 +10,19 @@ import i2 from '../../Images/KART MANAGER/Scalability and Flexibility.png';
 import i25 from '../../Images/KART MANAGER/Cost-Effective Solution.png';
 import i4 from '../../Images/KART MANAGER/Reliable Support and Updates.png'
 import i24 from '../../Images/KART MANAGER/Integration Capabilities.png';
-import s from '../../Images/st-icon-1.svg';
-import st from '../../Images/st-icon-2.svg';
-import st3 from '../../Images/st-icon-3.svg';
-import st4 from '../../Images/st-icon-4.svg';
-import st5 from '../../Images/st-icon-5.svg';
-import st6 from '../../Images/st-icon-6.svg';
+import s from '../../Images/Premium-Modules/kart manger - Copy/Advanced Analytics and Reporting.png';
+import st from '../../Images/Premium-Modules/kart manger - Copy/Marketing Automation.png';
+import st3 from '../../Images/Premium-Modules/kart manger - Copy/Order Management.png';
+import st4 from '../../Images/Premium-Modules/kart manger - Copy/Multi-Channel Selling.png';
+import st5 from '../../Images/Premium-Modules/kart manger - Copy/Advanced Inventory Control.png';
+import st6 from '../../Images/Premium-Modules/kart manger - Copy/Customer Loyalty and Rewards.png';
 import BenefitProductCard from '../../CustomComponents/ProductCard/BenefitProductCard';
 import li2 from '../../Images/KART MANAGER/Scalability and Flexibility1.png'
 import li4 from '../../Images/KART MANAGER/Reliable Support and Updates1.png'
 import li24 from '../../Images/KART MANAGER/Integration Capabilities1.png'
 import li25 from '../../Images/KART MANAGER/Cost-Effective Solution1.png'
 import { useRef } from 'react';
+import { Helmet } from 'react-helmet';
 
 const myDivStyle = {
   fontFamily: 'Alegreya, serif',
@@ -46,26 +47,34 @@ const KartManager = ({clickDownHandler}:any) => {
   return (
     <>
       <section id="hero" className="d-flex align-items-center" style={{ height: '100vh', background: '#f4faff' }}>
-
-        <div className="container mt-3">
-          <div className="row">
-            <div className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-              <h1>How Businesses benefit from <span style={myDivStyle}>Kart Manager</span></h1>
-              {/* <h2 style={{fontStyle:'italic'}}>We are team of talented designers making websites with React</h2> */}
-              <p className='mt-3'>Kart Manager empowers businesses to effectively manage their online stores, improve customer experience, and drive sales growth. </p>
-              <div className='btn-wrapper wow fadeInUp'>
-                <div className="d-flex justify-content-center justify-content-lg-start mt-4">
-                  <a className='btnn btn-primary' onClick={clickDownHandler}>Get Started</a>
-                  {/* <Button btnName='Free Trail'/> */}
-
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-              <img src={kart} className="img-fluid animated" alt="" />
-            </div>
-          </div>
+      <Helmet>
+                <title>Excellent softwares || KartManager</title>
+                <meta name="KartManager Page" content="KartManager page content" />
+            </Helmet>
+            <div className="container mt-3">
+  <div className="row">
+    <div className="col-lg-6 d-flex flex-column justify-content-center pt-2 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+      <h1>How Businesses benefit from <span style={myDivStyle}>Kart Manager</span></h1>
+      <p className='mt-0'>Kart Manager empowers businesses to effectively manage their online stores, improve customer experience, and drive sales growth. </p>
+      <div className='btn-wrapper wow fadeInUp'>
+        <div className="d-flex justify-content-center justify-content-lg-start mt-2">
+          <a className='btnn btn-primary' onClick={clickDownHandler}>Get Started</a>
         </div>
+      </div>
+    </div>
+    <div className="col-lg-6 order-1 order-lg-2 hero-img d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+      <img 
+        src={kart} 
+        className="img-fluid animated" 
+        alt="" 
+        style={{
+          width: window.innerWidth <= 768 ? '74%' : '100%',
+         maxWidth: '100%'}}
+      />
+    </div>
+  </div>
+</div>
+
 
       </section>
 

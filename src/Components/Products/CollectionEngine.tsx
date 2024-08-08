@@ -14,6 +14,7 @@ import li2 from '../../Images/COLLECTIONENGINE/Prompt Action.png'
 import li4 from '../../Images/COLLECTIONENGINE/Maintain Customer Relationships.png'
 import li24 from '../../Images/COLLECTIONENGINE/Improve Communication.png'
 import li25 from '../../Images/COLLECTIONENGINE/Minimize Delays and DisputeS.png';
+import { Helmet } from 'react-helmet';
 
 
 const myDivStyle = {
@@ -28,23 +29,36 @@ const CollectionEngine = ({clickDownHandler}:any) => {
   return (
     <>
       <section id="hero" className="d-flex align-items-center" style={{ height: '100vh', background: '#f4faff' }}>
-
+      <Helmet>
+                <title>Excellent softwares || Collection Engine</title>
+                <meta name="Collection Engine Page" content="Collection Engine page content" />
+            </Helmet>
         <div className="container mt-3">
           <div className="row">
-            <div className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <div className="col-lg-6 d-flex flex-column justify-content-center pt-2 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
               <h1>How Businesses benefit from <span style={myDivStyle}>Collection Engine</span></h1>
               {/* <h2 style={{fontStyle:'italic'}}>We are team of talented designers making websites with React</h2> */}
-              <p className='mt-3'>Collection Engine 3.0, the powerful successor to Collection Engine 2.0, designed to streamline and enhance your collections process like never before. it helps businesses in improving their cash flow (amount outstanding) by reducing the time it takes to collect payments, send Quotation, Invoice, Account Statement, etc. Timely bill reminders prompt customers to settle their outstanding balances, leading to faster payment cycles and increased liquidity for the business.</p>
+              <p className='mt-0'>Collection Engine 3.0, the powerful successor to Collection Engine 2.0, designed to 
+              streamline and enhance your collections process like never before. it helps businesses in improving their 
+              cash flow (amount outstanding) by reducing the time it takes to collect payments, send Quotation, Invoice, 
+              Account Statement, etc. 
+              {/* Timely bill reminders prompt customers to settle their outstanding balances, 
+              leading to faster payment cycles and increased liquidity for the business. */}
+              </p>
               <div className='btn-wrapper wow fadeInUp'>
-                <div className="d-flex justify-content-center justify-content-lg-start mt-4">
+                <div className="d-flex justify-content-center justify-content-lg-start mt-2">
                   <a className='btnn btn-primary' onClick={clickDownHandler}>Get Started</a>
                   {/* <Button btnName='Free Trail'/> */}
 
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-              <img src={whyus} className="img-fluid animated" alt="" />
+            <div className="col-lg-6 order-1 order-lg-2 hero-img d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+              <img src={whyus} className="img-fluid animated" alt="" 
+               style={{
+                width: window.innerWidth <= 768 ? '38%' : '100%',
+               maxWidth: '100%'}}
+              />
             </div>
           </div>
         </div>

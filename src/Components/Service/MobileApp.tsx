@@ -6,6 +6,7 @@ import Testimonial from '../Testimonial/Testimonial';
 import CustomizedBusiness from './CustomizedBusiness/CustomizedBusiness';
 import { useNavigate } from 'react-router-dom';
 import Contact from '../ContactUs/Contact';
+import { Helmet } from 'react-helmet';
 
 
 const Service = ({clickDownHandler}:any) => {
@@ -17,7 +18,10 @@ const Service = ({clickDownHandler}:any) => {
 
     return (
         <>
-
+            <Helmet>
+                <title>Excellent softwares || Mobile App </title>
+                <meta name="Mobile App Page" content="Mobile App services page content" />
+            </Helmet>
             <ServicesModal
                 heading='Customisation of Busy'
                 about='Maintaining financial records of a company is a Herculean task as a small error can quickly turn into a catastrophe. 
@@ -99,7 +103,7 @@ const Service = ({clickDownHandler}:any) => {
                 <section className='mob-app-service'>
                     <div className='container'>
                         <div className='sec-title'>
-                            <h2 className='h1'>Mobile App Development Services </h2>
+                            <h2 className='h1'>Mobile App Development Service </h2>
                         </div>
                         <div className='row-start'>
                             <div className='app-service-main'>

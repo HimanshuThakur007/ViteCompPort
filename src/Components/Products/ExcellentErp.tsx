@@ -21,6 +21,7 @@ import li2 from '../../Images/customize-modules.png'
 import li4 from '../../Images/Real-time Analytics and Reporting1.png'
 import li24 from '../../Images/Centralized Management1 .png'
 import li25 from '../../Images/Seamless Integration1.png'
+import { Helmet } from 'react-helmet';
 
 const myDivStyle = {
   fontFamily: 'Alegreya, serif',
@@ -29,20 +30,24 @@ const myDivStyle = {
   fontStyle: 'italic'
 };
 
-const ExcellentErp = ({clickDownHandler}:any) => {
+const ExcellentErp = ({ clickDownHandler }: any) => {
   let iconStyle = { color: '#2a1fbc' }
   return (
     <>
+      <Helmet>
+        <title>Excellent softwares || Excellent ERP</title>
+        <meta name="Erp Page" content="Erp page content" />
+      </Helmet>
       <section id="hero" className="d-flex align-items-center" style={{ height: '100vh', background: '#f4faff' }}>
 
         <div className="container mt-3">
           <div className="row">
-            <div className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <div className="col-lg-6 d-flex flex-column justify-content-center pt-2 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
               <h1>How Industries benefit from <span style={myDivStyle}>Excellent ERP</span></h1>
-              {/* <h2 style={{fontStyle:'italic'}}>We are team of talented designers making websites with React</h2> */}
-              <p className='mt-3'>Excellent ERP system can provide industries with increased operational efficiency, better data management, improved collaboration, enhanced customer satisfaction, compliance adherence, scalability, and informed decision-making.</p>
+
+              <p className='mt-0'>Excellent ERP system can provide industries with increased operational efficiency, better data management, improved collaboration, enhanced customer satisfaction, compliance adherence, scalability, and informed decision-making.</p>
               <div className='btn-wrapper wow fadeInUp'>
-                <div className="d-flex justify-content-center justify-content-lg-start mt-4">
+                <div className="d-flex justify-content-center justify-content-lg-start mt-2">
                   <a className='btnn btn-primary' onClick={clickDownHandler}>Get Started</a>
                   {/* <Button btnName='Free Trail'/> */}
 
@@ -61,44 +66,40 @@ const ExcellentErp = ({clickDownHandler}:any) => {
 
         <div className='features-section section-padding'>
           <div className='container'>
-            {/* <div className='row clearfix justify-content-between'> */}
+
             <div className='row clearfix align-items-center justify-content-between'>
               <div className='col-lg-5'>
                 <div className='col-lg-12'>
-                <div className='heading-wrapper with-separator'>
-                  <h1>Why <span style={{ fontFamily: 'serif', fontStyle: 'italic', color: '#2a1fbc', fontWeight: 'bold' }}>Excellent ERP</span></h1>
+                  <div className='heading-wrapper with-separator'>
+                    <h1>Why <span style={{ fontFamily: 'serif', fontStyle: 'italic', color: '#2a1fbc', fontWeight: 'bold' }}>Excellent ERP?</span></h1>
+                  </div>
+                  <div className='text-wrapper'>
+                    <p className='lead-text'>
+                      Are you tired of juggling multiple systems to manage your business operations? Look no further than Excellent ERP - a comprehensive and intuitive software solution designed to simplify and optimize your business processes. With Excellent ERP, you can seamlessly integrate various functions within your organization, saving time, increasing efficiency, and driving growth.
+                    </p>
+                  </div>
                 </div>
-                <div className='text-wrapper'>
-                  <p className='lead-text'>
-                    Are you tired of juggling multiple systems to manage your business operations? Look no further than Excellent ERP - a comprehensive and intuitive software solution designed to simplify and optimize your business processes. With Excellent ERP, you can seamlessly integrate various functions within your organization, saving time, increasing efficiency, and driving growth.
-                  </p>
-                  {/* <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum repellat, dignissimos est pariatur voluptas error tempore possimus hic ducimus, quod culpa illum ut a magni commodi voluptatibus asperiores veniam expedita!
-                  </p> */}
-                </div>
-                </div>
-                <div className='col-lg-12 mb-3' style={{marginTop:'7vh'}}>
-                <img src={erp} className="img-fluid" alt=""/>
+                <div className='col-lg-12 mb-3' style={{ marginTop: '7vh' }}>
+                  <img src={erp} className="img-fluid" alt="" />
                 </div>
               </div>
               <div className='col-lg-6 '>
                 <div className='row inner-row clearfix'>
-                {/* Say goodbye to data silos and enjoy a holistic view of your organization. */}
                   <div className="col-lg-6 col-md-6 col-sm-6">
-                    <SmallProductCard cardTitle='Centralized Management' src={i24} src2={li24}  cardText='Excellent ERP provides a centralized platform to manage all aspects of your business, including inventory, sales, finance, manufacturing, human resources, and more.' />
+                    <SmallProductCard cardTitle='Centralized Management' src={i24} src2={li24} cardText='Excellent ERP provides a centralized platform to manage all aspects of your business, including inventory, sales, finance, manufacturing, human resources, and more.' />
                   </div>
-                  {/* Whether you are a small startup or a large enterprise, Excellent ERP can scale with your business. */}
+
                   <div className='col-lg-6 col-md-6 col-sm-6'>
                     <SmallProductCard cardTitle='Customizable Modules' src={i2} src2={li2} cardText='Tailored to meet your specific business needs. Choose from a range of modules and functionalities to create a personalized solution that aligns with your requirements. Whether you are a small startup or large corporation.' />
                   </div>
 
                   <div className='col-lg-6 col-md-6 col-sm-6 himanshu'>
                     <SmallProductCard cardTitle='Real-time Analytics and Reporting' src={i4} src2={li4} cardText='Make data-driven decisions with confidence. Excellent ERP offers real-time analytics and reporting tools, providing valuable insights into your business performance.' />
-                    {/* Access key metrics, generate customized reports, and gain a deeper understanding of your operations to drive efficiency and identify growth opportunities. */}
+
                   </div>
                   <div className='col-lg-6 col-md-6 col-sm-6 mycard'>
                     <SmallProductCard cardTitle='Seamless Integration' src={i25} src2={li25} cardText='Seamlessly integrates with other software systems, such as CRM platforms, E-commerce platforms, and third-party applications. Achieve a unified ecosystem where data flows seamlessly across your organization.' />
-                    {/* eliminating manual data entry and ensuring data accuracy. */}
+
                   </div>
                 </div>
 
@@ -170,7 +171,7 @@ const ExcellentErp = ({clickDownHandler}:any) => {
 
               </div>
 
-              <div className='row clearfix' style={{marginTop:'10vh'}}>
+              <div className='row clearfix' style={{ marginTop: '10vh' }}>
                 <div className='col-lg-4 col-md-6'>
                   <BenefitProductCard head='Streamlined Processes' text='Integrates various departments and functions within an organization, enabling seamless communication and collaboration. It streamlines business processes, eliminates duplicate and manual data entry, and reduces the need for multiple systems.' />
                 </div>
@@ -239,13 +240,13 @@ const ExcellentErp = ({clickDownHandler}:any) => {
             <div className='col-lg-2 col-md-6'>
               <PremimumCard phead='Reporting/Analytics' psrc={st6} />
             </div>
-           
+
           </div>
         </div>
       </div>
       <hr />
       <div id='contact'>
-      <Contact />
+        <Contact />
       </div>
     </>
   )

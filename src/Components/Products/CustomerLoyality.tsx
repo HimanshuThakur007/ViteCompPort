@@ -21,6 +21,7 @@ import li2 from '../../Images/CL+/Customization1.png'
 import li4 from '../../Images/CL+/Customizati.png'
 import li24 from '../../Images/CL+/Customization.png'
 import li25 from '../../Images/CL+/cost effectiveness1.png'
+import { Helmet } from 'react-helmet';
 
 const myDivStyle = {
   fontFamily: 'Alegreya, serif',
@@ -34,15 +35,18 @@ const CustomerLoyality = ({clickDownHandler}:any) => {
   return (
     <>
       <section id="hero" className="d-flex align-items-center" style={{ height: '100vh', background: '#f4faff' }}>
-
+      <Helmet>
+                <title>Excellent softwares || CL+</title>
+                <meta name="Customer Loyalty Plus Page" content="Customer Loyalty Plus page content" />
+            </Helmet>
         <div className="container mt-3">
           <div className="row">
-            <div className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <div className="col-lg-6 d-flex flex-column justify-content-center pt-2 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
               <h1>How Businesses benefit from <span style={myDivStyle}>Customer Loyalty Plus</span></h1>
               {/* <h2 style={{fontStyle:'italic'}}>We are team of talented designers making websites with React</h2> */}
-              <p className='mt-3'>we are committed to providing you with a user-friendly and feature-rich loyalty management platform. Build a loyal customer base, increase customer retention, and drive your business growth with CL+. Get started today and witness the transformative power of customer loyalty</p>
+              <p className='mt-0'>we are committed to providing you with a user-friendly and feature-rich loyalty management platform. Build a loyal customer base, increase customer retention, and drive your business growth with CL+. Get started today and witness the transformative power of customer loyalty</p>
               <div className='btn-wrapper wow fadeInUp'>
-                <div className="d-flex justify-content-center justify-content-lg-start mt-4">
+                <div className="d-flex justify-content-center justify-content-lg-start mt-2">
                   <a className='btnn btn-primary' onClick={clickDownHandler}>Get Started</a>
                   {/* <Button btnName='Free Trail'/> */}
 
@@ -50,7 +54,11 @@ const CustomerLoyality = ({clickDownHandler}:any) => {
               </div>
             </div>
             <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-              <img src={loyalty} className="img-fluid animated" alt="" />
+              <img src={loyalty} className="img-fluid animated" alt="" 
+               style={{
+                width: window.innerWidth <= 768 ? '64%' : '100%',
+               maxWidth: '100%'}}
+              />
             </div>
           </div>
         </div>

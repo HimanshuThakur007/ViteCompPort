@@ -8,11 +8,11 @@ import i2 from "../../Images/SFA/Order Management.png";
 import i25 from "../../Images/SFA/Improved Productivity and Efficiency.png";
 import i4 from "../../Images/SFA/Product Catalog and Information.png";
 import i24 from "../../Images/SFA/Sales Analytics and Reporting.png";
-import s from '../../Images/Erp-images/accounting.png';
-import st from '../../Images/Erp-images/payment-method.png';
-import st3 from '../../Images/Erp-images/inventory.png';
-import st4 from '../../Images/Erp-images/production.png';
-import st5 from '../../Images/Erp-images/quality-control.png';
+import s from '../../Images/Premium-Modules/Excellent SFA/Product Catalogue Management.png';
+import st from '../../Images/Premium-Modules/Excellent SFA/Salesman Tracking.png';
+import st4 from '../../Images/Premium-Modules/Excellent SFA/salesman route planning.png';
+import st3 from '../../Images/Premium-Modules/Excellent SFA/Order Management.png';
+import st5 from '../../Images/Premium-Modules/Excellent SFA/Data Backup And Sync.png';
 import st6 from '../../Images/Erp-images/report.png';
 import BenefitProductCard from "../../CustomComponents/ProductCard/BenefitProductCard";
 import li2 from "../../Images/SFA/Order Management1.png";
@@ -20,6 +20,7 @@ import li4 from "../../Images/SFA/Product Catalog and Information1.png";
 import li24 from "../../Images/SFA/Sales Analytics and Reporting1.png";
 import li25 from "../../Images/SFA/Improved Productivity and Efficiency1.png";
 import sfa from '../../Images/productLogo/finall logo sfa.png';
+import { Helmet } from "react-helmet";
 
 const myDivStyle = {
   fontFamily: "Alegreya, serif",
@@ -28,7 +29,7 @@ const myDivStyle = {
   fontStyle: "italic",
 };
 
-const SfaPage = ({ openHandler }: any) => {
+const SfaPage = ({ clickDownHandler }: any) => {
   let iconStyle = { color: "#2a1fbc" };
   return (
     <>
@@ -37,10 +38,14 @@ const SfaPage = ({ openHandler }: any) => {
         className="d-flex align-items-center"
         style={{ height: "100vh", background: "#f4faff" }}
       >
+        <Helmet>
+                <title>Excellent softwares || SFA</title>
+                <meta name="SFA Page" content="SFA page content" />
+            </Helmet>
         <div className="container mt-3">
           <div className="row">
             <div
-              className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+              className="col-lg-6 d-flex flex-column justify-content-center pt-2 pt-lg-0 order-2 order-lg-1"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -49,14 +54,14 @@ const SfaPage = ({ openHandler }: any) => {
                 <span style={myDivStyle}>Excellent SFA</span>
               </h1>
               {/* <h2 style={{fontStyle:'italic'}}>We are team of talented designers making websites with React</h2> */}
-              <p className="mt-3">
+              <p className="mt-0">
                 Optimize their sales processes, improve sales performance, and
                 provide better customer experiences. By leveraging automation,
                 real-time data, and collaboration.
               </p>
               <div className="btn-wrapper wow fadeInUp">
-                <div className="d-flex justify-content-center justify-content-lg-start mt-4">
-                  <a className="btnn btn-primary" onClick={openHandler}>
+                <div className="d-flex justify-content-center justify-content-lg-start mt-2">
+                  <a className="btnn btn-primary" onClick={clickDownHandler}>
                     Get Started
                   </a>
                   {/* <Button btnName='Free Trail'/> */}

@@ -21,6 +21,7 @@ import li2 from '../../Images/icon-2-light.svg'
 import li4 from '../../Images/icon-4-light.svg'
 import li24 from '../../Images/icon-24-light.svg'
 import li25 from '../../Images/icon-25-light.svg'
+import { Helmet } from 'react-helmet';
 
 const myDivStyle = {
   fontFamily:'Alegreya, serif',
@@ -34,15 +35,18 @@ const B2G = () => {
   return (
     <>
      <section id="hero" className="d-flex align-items-center" style={{height:'100vh',background:'#f4faff'}}>
-
+     <Helmet>
+                <title>Excellent softwares || B2G</title>
+                <meta name="B2G Page" content="B2G page content" />
+            </Helmet>
 <div className="container mt-3">
   <div className="row">
-    <div className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+    <div className="col-lg-6 d-flex flex-column justify-content-center pt-2 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
       <h1>How Business benefit from <span style={myDivStyle}>Excellent Busy To Google</span></h1>
       {/* <h2 style={{fontStyle:'italic'}}>We are team of talented designers making websites with React</h2> */}
-      <p className='mt-3'>Google Cloud's data analytics and machine learning capabilities can be used to optimize manufacturing processes, predict maintenance needs, and streamline supply chain operations. Additionally, Google Workspace (formerly G Suite) offers communication and collaboration tools that can enhance productivity and coordination among teams.</p>
+      <p className='mt-0'>Busy to Google, revolutionizes the way businesses manage and access their data by seamlessly integrating Busy data with Google Drive. This innovative Add-on by Excellent Softwares empowers businesses with unparalleled convenience and efficiency.</p>
       <div className='btn-wrapper wow fadeInUp'>
-      <div className="d-flex justify-content-center justify-content-lg-start mt-4">
+      <div className="d-flex justify-content-center justify-content-lg-start mt-2">
         <a className='btnn btn-primary'>Get Started</a>
         {/* <Button btnName='Free Trail'/> */}
       
@@ -50,7 +54,11 @@ const B2G = () => {
       </div>
     </div>
     <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-      <img src={BG} className="img-fluid animated" alt=""/>
+      <img src={BG} className="img-fluid animated" alt=""
+       style={{
+        width: window.innerWidth <= 768 ? '49%' : '100%',
+       maxWidth: '100%'}}
+      />
     </div>
   </div>
 </div>
@@ -68,8 +76,7 @@ const B2G = () => {
                 </div>
                 <div className='text-wrapper'>
                   <p className='lead-text'>
-                  Excellent SFA to empower their sales teams, enhance productivity, and optimize sales processes. By leveraging mobile devices, sales representatives can access real-time customer data, update sales records on the go, 
-                   Ultimately, Excellent SFA mobile apps are used to improve sales team performance, streamline workflows, enhance customer engagement, and drive sales growth.
+                  Scheduled syncing is a feature offered by BtoG that allows businesses to automate the synchronization process between BUSY software and Google Drive at specified intervals. Here's how this benefit works:
 
                   </p>
                   {/* <p>
@@ -80,18 +87,18 @@ const B2G = () => {
               <div className='col-lg-6 '>
                 <div className='row inner-row clearfix'>
                 <div className="col-lg-6 col-md-6 col-sm-6">
-                                    <SmallProductCard cardTitle='Centralized Management' src={i2} src2={li2} cardText='Excellent ERP provides a centralized platform to manage all aspects of your business, including inventory, sales, finance, manufacturing, human resources, and more.' />
+                                    <SmallProductCard cardTitle='Real-Time Accessibility' src={i2} src2={li2} cardText='Excellent ERP provides a centralized platform to manage all aspects of your business, including inventory, sales, finance, manufacturing, human resources, and more.' />
                                     </div>
 
                                     <div className='col-lg-6 col-md-6 col-sm-6'>
-                    <SmallProductCard cardTitle='Customizable Modules' src={i24} src2={li24} cardText='Tailor Excellent ERP to meet your specific business needs. Choose from a range of modules and functionalities to create a personalized solution that aligns with your unique requirements. ' />
+                    <SmallProductCard cardTitle='Enhanced Data Security' src={i24} src2={li24} cardText='BtoG ensures that your data remains safe and confidential. Reports synced to Google Drive are securely stored, and access is restricted to authorized personnel' />
                   </div>
                 
                   <div className='col-lg-6 col-md-6 col-sm-6 himanshu'>
-                    <SmallProductCard cardTitle='Real-time Analytics and Reporting' src={i4} src2={li4} cardText='Make data-driven decisions with confidence. Excellent ERP offers real-time analytics and reporting tools, providing valuable insights into your business performance. ' />
+                    <SmallProductCard cardTitle='Streamlined Workflow' src={i4} src2={li4} cardText='Simplifies workflow by automating the sync process between BUSY software and Google Drive. Once configured, you can set it and forget it, allowing BtoG to handle the data synchronization seamlessly in the background, saving you time and effort.' />
                   </div>
                   <div className='col-lg-6 col-md-6 col-sm-6 mycard'>
-                    <SmallProductCard cardTitle='Seamless Integration' src={i25} src2={li25} cardText='Excellent ERP seamlessly integrates with other software systems, such as CRM platforms, e-commerce platforms, and third-party applications. Achieve a unified ecosystem where data flows seamlessly across your organization,' />
+                    <SmallProductCard cardTitle='Scheduled Syncing' src={i25} src2={li25} cardText='BtoG auto-scheduler feature to set intervals for data synchronization according to your preferences. Whether its every few minutes or at specific times of the day, BtoG offers flexibility in syncing data to Google Drive, ensuring that you are always working with the most current information' />
                   </div>
                 </div>
                
@@ -119,16 +126,16 @@ const B2G = () => {
                 <div className='col-lg-12 d-flex'>
                   <div className='col-lg-6'>
                     <ul>
-                      <li><TiTick size={20} style={iconStyle} />40+ Reports.</li>
-                      <li><TiTick size={20} style={iconStyle} />One-Time Configuration.</li>
-                      <li><TiTick size={20} style={iconStyle} />Configurable Filters.</li>
+                      <li><TiTick size={20} style={iconStyle} />Comprehensive Monitoring</li>
+                      <li><TiTick size={20} style={iconStyle} />User-Friendly Setup</li>
+                      <li><TiTick size={20} style={iconStyle} />Customizable Data Syncing</li>
                     </ul>
                   </div>
                   <div className='col-lg-6'>
                     <ul>
-                      <li><TiTick size={20} style={iconStyle} />User Friendly Interface.</li>
-                      <li><TiTick size={20} style={iconStyle} />Customization Available.</li>
-                      <li><TiTick size={20} style={iconStyle} />Automated Intervel Based Data Sync.</li>
+                      <li><TiTick size={20} style={iconStyle} />Efficient Data Management</li>
+                      <li><TiTick size={20} style={iconStyle} />Seamless Integration</li>
+                      <li><TiTick size={20} style={iconStyle} />Scalability</li>
                      
                     </ul>
                   </div>
@@ -146,7 +153,7 @@ const B2G = () => {
                 <div className='heading-wrapper text-center'>
                   <h2 className='h1'>Benefits of Excellent Busy To Google (B2G)</h2>
                   <div className='lead-text'>
-                    <p >ERP (Enterprise Resource Planning) software offers numerous benefits to businesses. Some of the key advantages of implementing ERP software include:</p>
+                    <p >The benefits of Excellent Busy To Google (B2G) to every business owner:</p>
                   </div>
                 </div>
                 <div className='empty-space-60 clearfix'></div>
@@ -155,25 +162,25 @@ const B2G = () => {
 
               <div className='row clearfix' style={{marginTop:'10vh'}}>
                 <div className='col-lg-4 col-md-6'>
-                <BenefitProductCard  head='Enhanced Productivity' text='SFA mobile apps provide sales representatives with access to critical information and tools on their mobile devices, enabling them to be more productive while on the go. They can update customer data, manage leads, track sales activities, and access sales collateral easily' />
+                <BenefitProductCard  head='Real-Time Insights' text='B2G enables business owners to access real-time insights into their companys performance, including outstanding amounts, stock status, and billing details. Stay informed and makes data-driven decisions swiftly to drive business growth and success' />
                 </div>
                 <div className='col-lg-4 col-md-6'>
-                <BenefitProductCard head='Real-Time Data and Analytics' text='With an SFA mobile app, sales teams can access real-time data and analytics about customers, leads, and sales performance. This enables them to make informed decisions, identify trends, and prioritize opportunities. Managers can also gain insights into team performance and make data-driven decisions to optimize.' />
+                <BenefitProductCard head='Streamlined Operations' text='Say goodbye to manual data transfers and cumbersome processes with B2G. Automate data syncing between BUSY software and Google Drive, freeing up valuable time and resources for business owners to focus on strategic initiatives and core operations' />
                 </div>
                 <div className='col-lg-4 col-md-6'>
-                <BenefitProductCard head='Improved Sales Processes' text='SFA mobile apps streamline sales processes by automating repetitive tasks, such as data entry, order processing, and reporting. This reduces manual errors, ensures data accuracy, and frees up time for sales representatives to focus on building relationships with customers and closing deals.' />
+                <BenefitProductCard head='Efficient Collaboration' text='Foster collaboration and teamwork among employees by providing them with easy access to updated reports and data via Google Drive. Enable seamless communication and decision-making across departments, leading to increased productivity and efficiency.' />
                 </div>
                 <div className='col-lg-4 col-md-6'>
-                <BenefitProductCard head='Better Customer Relationship Management' text='SFA mobile apps provide a comprehensive view of customer information, including contact details, communication history, purchase history, and preferences. This enables sales representatives to have more meaningful interactions with customers, personalize their approach, and provide better customer service.' />
+                <BenefitProductCard head='Customizable Solutions' text='Tailor B2G to suit the unique needs and preferences of your business. Select specific reports and companies to sync with Google Drive, customize syncing schedules, and adapt the app to align with your workflow demands seamlessly.' />
                 </div>
                 <div className='col-lg-4 col-md-6'>
-                <BenefitProductCard head='Mobility and Flexibility' text='SFA mobile apps allow sales representatives to access and update information from anywhere, anytime. Whether they are on the road, at client meetings, or working remotely, they can stay connected and productive. This flexibility improves responsiveness and allows for timely follow-ups, increasing customer satisfaction.' />
+                <BenefitProductCard head='Cost Savings' text='Reduce overhead costs associated with manual data entry and management processes by implementing B2G. Increase operational efficiency and optimize resource utilization, resulting in significant cost savings over time.' />
                 </div>
                 <div className='col-lg-4 col-md-6'>
-                <BenefitProductCard head='Collaboration and Communication' text='SFA mobile apps often include features that facilitate collaboration and communication within sales teams. Sales representatives can share information, collaborate on deals, and communicate updates and insights in real-time, fostering teamwork and improving coordination.' />
+                <BenefitProductCard head='Scalable Solutions' text='Scale your data syncing operations effortlessly with B2G as your business grows. Whether you are a small startup or a large enterprise, B2G adapts to your evolving needs without compromising performance or security.' />
                 </div>
                 <div className='col-lg-4 col-md-6'>
-                <BenefitProductCard head='Sales Performance Tracking' text='SFA mobile apps enable tracking and monitoring of individual and team sales performance. Managers can set targets, track progress, and provide timely feedback and coaching to improve performance. This promotes accountability and motivates sales representatives to achieve their goals.' />
+                <BenefitProductCard head='Competitive Advantage' text='Gain a competitive edge in the market by leveraging B2G to streamline operations, improve decision-making, and enhance customer satisfaction. Stay ahead of the competition by embracing innovative solutions that drive business growth and success.' />
                 </div>
               </div>
             </div>
@@ -181,14 +188,12 @@ const B2G = () => {
         </div>
 
       </section>
- <div className='container'>
+ {/* <div className='container'>
             <div className='row clearfix justify-content-center'>
               <div className='col-lg-8'>
                 <div className='heading-wrapper text-center mt-4'>
                   <h2>Excellent Provides <span style={{ fontFamily: 'serif', fontWeight:'bold', fontStyle: 'italic', color: 'rgb(42, 31, 188)' }}>Premium Modules</span></h2>
-                  {/* <div className='lead-text'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores optio sapiente veniam quasi, asperiores, laudantium totam dicta placeat sed eveniet quaerat. Voluptatibus modi fugiat consequatur ratione harum ab mollitia commodi.</p>
-                  </div> */}
+                  
                 </div>
                 <div className='empty-space-60 clearfix'></div>
 
@@ -216,7 +221,7 @@ const B2G = () => {
                
               </div>
             </div>
-          </div>
+          </div> */}
 <hr />
         <Contact/>
     </>

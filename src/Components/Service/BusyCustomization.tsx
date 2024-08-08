@@ -3,6 +3,7 @@ import { TiTick } from 'react-icons/ti'
 import bg from '../../Images/erp-function.png';
 import Testimonial from '../Testimonial/Testimonial';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const BusyCustomization = ({openHandler}:any) => {
     let iconStyle = { color: '#2a1fbc' }
@@ -25,6 +26,10 @@ const BusyCustomization = ({openHandler}:any) => {
 
             </div>
         </div> */}
+         <Helmet>
+                <title>Excellent softwares || Busy Customization</title>
+                <meta name="Busy Customization Page" content="Busy Customization services page content" />
+            </Helmet>
         <section className="breadcrumbs webdev-breadcrumb" style={{padding: '60px 0', overflow:'hidden', marginTop:'2px'}}>
 <div className="container pos-r">
     <div className="banner-content">
@@ -145,7 +150,7 @@ const BusyCustomization = ({openHandler}:any) => {
         </section>
 
 
-        <div className="cta-section section-padding style-dark">
+        {/* <div className="cta-section section-padding style-dark">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-7 col-sm-12">
@@ -160,10 +165,10 @@ const BusyCustomization = ({openHandler}:any) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
 
         {/* ---------------------------------------------------------------------------------------------------------------- */}
-        <Testimonial />
+        {/* <Testimonial /> */}
 
 
     {/* </section> */}

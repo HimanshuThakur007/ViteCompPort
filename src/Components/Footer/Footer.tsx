@@ -32,9 +32,11 @@ const Footer = () => {
                 <ul>
                   <li><i className="bx bx-chevron-right"></i> <NavLink to="/">Home</NavLink></li>
                   <li><i className="bx bx-chevron-right"></i> <NavLink to="/about">About us</NavLink></li>
-                  <li><i className="bx bx-chevron-right"></i> <NavLink to="/enquiry">Contact Us</NavLink></li>
-                  {/* <li><i className="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                  <li><i className="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> */}
+                  <li><i className="bx bx-chevron-right"></i> <NavLink to="/feedback">FeedBack</NavLink></li>
+                  {/* <li><i className="bx bx-chevron-right"></i> <NavLink to="/enquiry">Contact Us</NavLink></li> */}
+                  {/* <li><i className="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li> */}
+                  <li><i className="bx bx-chevron-right"></i> <NavLink to="privacy_policy">Privacy policy</NavLink></li>
+                  <li><i className="bx bx-chevron-right"></i> <NavLink to="/terms_of_services">Terms Of Services</NavLink></li>
                 </ul>
               </div>
 

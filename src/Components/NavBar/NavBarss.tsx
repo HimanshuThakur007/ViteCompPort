@@ -4,10 +4,13 @@ import { NavLink } from 'react-router-dom';
 import nb from '../../Images/excellent LOGO 30-03-2023.png';
 import busy from '../../Images/team/busy logo.png';
 import nimg from '../../Images/home/navimg.png'
-import {MdArrowDropDown} from 'react-icons/md'
+
 
 const NavBarss = () => {
-
+    // const location = useLocation()
+    // // const { location } = props
+    // let pathname = location.pathname
+    // console.log('routerPath',pathname)
 const [show, setShow]= useState(false);
 const [isCollapse, setIsCollapse ]:any = useState(false)
 const [isProduct, setIsProduct]:any = useState(false)
@@ -40,7 +43,7 @@ const navLinkStyle = ({ isActive}: any)=>{
 
   return (
     <>
-  <header id="master-head" className="navbar menu-center menu-fixed">
+  <header id="master-head" className="navbar menu-center menu-fixed" style={{marginTop:'-1px'}}>
                 <div className="col-lg-12 col-9 d-flex">
                     <div id="main-logo" className="col-lg-3 col-12 logo-container">
                         <NavLink className="logo" to="/">
@@ -68,7 +71,7 @@ const navLinkStyle = ({ isActive}: any)=>{
                               
                             </li>
                             <li className="menu-item menu-item-has-children mega-menu">
-                                <a href="#">Products </a><span className={`${isProduct ?"child-link":'child-link active'}`} onClick={productCollapse}><i className="fas fa-chevron-down"></i></span>
+                                <a href="#">Products </a><span className={`${isProduct ?"child-link":'child-link active'}`} onClick={productCollapse}><i className="fas fa-chevron-down" ></i></span>
                                 <ul className={`${isProduct?'':"sub-menu mega-menu-inner"}`}>
                                     <li className="menu-item col-title">
                                         <a>Products</a>
@@ -111,7 +114,7 @@ const navLinkStyle = ({ isActive}: any)=>{
                                     </li>
                                     
                                     <li onClick={reloadHandler} className="menu-item">
-                                        <NavLink  to="/saasapp" >Saas App Development</NavLink>
+                                        <NavLink  to="/saasapp" >SaaS App Development</NavLink>
                                     </li>
                                     <li onClick={reloadHandler} className="menu-item">
                                         <NavLink  to="/busycust" >Busy Customisation</NavLink>
@@ -139,7 +142,7 @@ const navLinkStyle = ({ isActive}: any)=>{
                                 <NavLink style={navLinkStyle} to="/enquiry_form">Enquiry</NavLink>
                               
                             </li>
-                            <li className="menu-item d-lg-none d-xl-none d-xxl-none d-flex">
+                            <li className="menu-item d-lg-none d-xl-none d-xxl-none d-flex mt-5">
                             <NavLink className="logo ms-5" to="#">
                             <img src={busy} className="ms-5 logo-dark" alt="DCode"/>
                             

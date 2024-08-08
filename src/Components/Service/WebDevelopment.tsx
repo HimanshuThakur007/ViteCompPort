@@ -4,6 +4,7 @@ import Testimonial from "../Testimonial/Testimonial";
 import './ServiceStyle.css'
 import { useNavigate } from "react-router-dom";
 import Contact from "../ContactUs/Contact";
+import { Helmet } from "react-helmet";
 
 const WebDevelopment = ({clickDownHandler}:any) => {
     const navigate = useNavigate()
@@ -25,6 +26,10 @@ const WebDevelopment = ({clickDownHandler}:any) => {
 
                     </div>
                 </div> */}
+                 <Helmet>
+                <title>Excellent softwares || Web App Development </title>
+                <meta name="Web App Development Page" content="Web App Development services page content" />
+            </Helmet>
             <section className="breadcrumbs webdev-breadcrumb" style={{ padding: '60px 0', overflow: 'hidden', marginTop:'2px' }}>
                 <div className="container pos-r">
                     <div className="banner-content">
@@ -101,7 +106,7 @@ const WebDevelopment = ({clickDownHandler}:any) => {
                                         <a href='' className='c-black'>
                                             <h5> Discovery & Planning </h5>
                                         </a>
-                                        <p>In this phase, we lay the crucial groundwork that sets the tone for the entire website development project. This initial stage is all about gathering comprehensive information and understanding the project's scope, objectives, and requirements. Our dedicated team collaborates closely with you to ensure a clear and unified vision before moving forward with the development process.</p>
+                                        <p>In this phase, we lay the crucial groundwork that set the tone for the entire website development project. This initial stage is all about gathering comprehensive information and understanding the project's scope, objectives, and requirements. Our dedicated team collaborates closely with you to ensure a clear and unified vision before moving forward with the development process.</p>
                                     </figcaption>
                                 </li>
                                 <li className='theme-card to-load card-inner-structure-3 cross-mobile-app loaded'>
@@ -254,7 +259,7 @@ const WebDevelopment = ({clickDownHandler}:any) => {
 <section className="brand-webdev bg-light-yellow" style={{backgroundColor:'#fbffef'}}>
         <div className="container">
             <div className="sec-title web_app_div">
-                <h2 className="h1">Why Choose Excellent Softwares for Web Development</h2>
+                <h2 className="h1">Why Choose Excellent Softwares for Web Development ?</h2>
                 <p>Here are a few ways that we stand out as a company when it comes to what our experience is with
                     websites and creating digital experiences.</p>
             </div>

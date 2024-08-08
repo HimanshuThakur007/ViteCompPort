@@ -3,6 +3,7 @@ import Testimonial from '../Testimonial/Testimonial'
 import './ServiceStyle.css'
 import { useNavigate } from 'react-router-dom'
 import Contact from '../ContactUs/Contact'
+import { Helmet } from 'react-helmet'
 
 const SaasApp = ({clickDownHandler}:any) => {
     const navigate = useNavigate()
@@ -24,6 +25,10 @@ const SaasApp = ({clickDownHandler}:any) => {
 
                     </div>
                 </div> */}
+                 <Helmet>
+                <title>Excellent softwares || SaaS Application </title>
+                <meta name="SaaS Application Platform Development Page" content="SaaS Application Platform Development services page content" />
+            </Helmet>
 
 <section className="breadcrumbs webdev-breadcrumb" style={{padding: '60px 0', overflow:'hidden', marginTop:'2px'}}>
 <div className="container pos-r">

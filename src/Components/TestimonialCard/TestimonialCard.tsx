@@ -28,7 +28,7 @@ const TestimonialCard = () => {
             <div className=' customersSay'>
           <h3 style={{color:'#656b71'}}>Mr. Sanjeev Yadav</h3>
           <p className='mb-3'>CEO, Skypark India</p>
-          <p>"Excellent Softwares converting complex business process into simpler ones and this provides great value addition to public life."</p>
+          <p>"Excellent Softwares converting complex business process into simpler ones and this provides a great value addition to public life."</p>
           </div>
         </Carousel.Caption>
       </div>
@@ -49,7 +49,7 @@ const TestimonialCard = () => {
             <div className='customersSay'>
           <h3 style={{color:'#656b71'}}>Mr. Dinesh Gupta</h3>
           <p className='mb-3'>Founder, Busy Infotech Pvt. Ltd.</p>
-          <p>"Excellent Softwares has made a significant contribution in the growth of BUSY of providing custimization services around BUSY which has helped BUSY win many accounts especially in mid-sized business segment. I wish them all the best."</p>
+          <p>"Excellent Softwares have made a significant contribution in the growth of BUSY of providing customisation services around BUSY which has helped BUSY win many accounts especially in mid-sized business segment. I wish them all the best."</p>
           </div>
         </Carousel.Caption>
       </div>

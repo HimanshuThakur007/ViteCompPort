@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Home from './Components/Home/Home'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import About from './Components/About/About'
-import NavBar from './Components/NavBar/NavBar'
 import Service from './Components/Service/MobileApp';
 import Testimonial from './Components/Testimonial/Testimonial';
 import Products from './Components/Products/ExcellentErp';
@@ -14,7 +13,6 @@ import Header from './CustomComponents/Banner';
 import NavBarss from './Components/NavBar/NavBarss';
 import Blog from './Components/BlogSection/Blog';
 import BlogDetails from './Components/BlogSection/BlogDetails';
-import UnderC from './Components/UnderC';
 import PayRoll from './Components/Products/PayRoll';
 import CollectionEngine from './Components/Products/CollectionEngine';
 import CustomerLoyality from './Components/Products/CustomerLoyality';
@@ -34,6 +32,9 @@ import EnquiryForm from './Components/Enquiry/EnquiryForm';
 import CustomizedSoftware from './Components/Service/CustomizedSoftware';
 import HeaderBar from './Components/NavBar/HeaderBar';
 import EnquiryModal from './Components/Modals/EnquiryModal';
+import PrivacyPage from './Components/PrivacyPage/PrivacyPage';
+import FeedBackPage from './Components/FeedBack/FeedBackPage';
+import TermsOfServices from './Components/TermsOfServices/TermsOfServices';
 
 
 
@@ -41,6 +42,14 @@ import EnquiryModal from './Components/Modals/EnquiryModal';
 const App = () => {
 
   const [iSopen, setIsOpen]: any = useState(false)
+
+  let url = 'http://103.194.9.31';
+  let port = '22099'
+
+  useEffect(()=>{
+    localStorage.setItem('Url',url)
+    localStorage.setItem('Port', port)
+  },[])
 
   const closeHandler = () => {
       setIsOpen(false)
@@ -95,7 +104,10 @@ const App = () => {
 <Route path='/busycust' element={<BusyCustomization clickDownHandler={clickDownHandler}/>}/>
 <Route path='/enquiry_form' element={<EnquiryForm/>}/>
 <Route path='/customize_software' element={<CustomizedSoftware clickDownHandler={clickDownHandler}/>}/>
-<Route path='*' element={<UnderC/>}/>
+<Route path='/privacy_policy' element={<PrivacyPage/>}/>
+<Route path='/terms_of_services' element={<TermsOfServices/>}/>
+<Route path='/feedback' element={<FeedBackPage/>}/>
+
 {/* </Route> */}
 </Routes>
 </main>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NavBar from "../NavBar/NavBar";
 import HeroImage from "../HeroImage/HeroImage";
 import ClientSection from "../CllientSection/ClientSection";
 import WhyUs from "../WhyUs/WhyUs";
@@ -10,6 +9,7 @@ import TestimonialCard from "../TestimonialCard/TestimonialCard";
 import OurServices from "../OurServices/OurServices";
 import EnquiryModal from "../Modals/EnquiryModal";
 import HowStarted from "../HowWeStart/HowStarted";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [iSopen, setIsOpen]: any = useState(false);
@@ -116,10 +116,14 @@ switch(type){
 
   return (
     <>
+     <Helmet>
+                <title>Excellent softwares</title>
+                <meta name="Home Page" content="Home page content" />
+            </Helmet>
       <EnquiryModal
         isShow={iSopen}
         closeModal={closeHandler}
-        heading="Interested ?"
+        heading="Interested?"
         about="my name is modal!!!"
         Close="click"
       />

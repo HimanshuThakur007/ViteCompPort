@@ -1,6 +1,7 @@
 import React from 'react'
 import erp from '../../Images/erp-system-img.png'
 import Contact from '../ContactUs/Contact';
+import { Helmet } from 'react-helmet';
 
 const Consulting = ({clickDownHandler}:any) => {
     const myDivStyle = {
@@ -12,7 +13,10 @@ const Consulting = ({clickDownHandler}:any) => {
   return (
     <>
       <section id="hero" className="d-flex align-items-center" style={{height:'75vh',background:'#f4faff'}}>
-
+      <Helmet>
+                <title>Excellent softwares || Strategy & Consulting</title>
+                <meta name="Strategy & Consulting Page" content="Strategy & Consulting services page content" />
+            </Helmet>
 <div className="container mt-3">
   <div className="row">
     <div className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
@@ -39,7 +43,7 @@ const Consulting = ({clickDownHandler}:any) => {
         <div className="container">
             <div className="sec-title to-load loaded">
                 <h2 className="h1">Scale your in-house development team with <br/> our Best tech talent on-demand</h2>
-                <p>we offer comprehensive consulting services designed to empower your business for success in the ever-evolving digital landscape. Our seasoned team of consultants brings a wealth of knowledge and expertise across various industries, providing valuable insights and strategic guidance tailored to your unique business needs.</p>
+                <p>We offer comprehensive consulting services designed to empower your business for success in the ever-evolving digital landscape. Our seasoned team of consultants brings a wealth of knowledge and expertise across various industries, providing valuable insights and strategic guidance tailored to your unique business needs.</p>
             </div>
         </div>
     </section>

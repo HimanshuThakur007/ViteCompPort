@@ -8,12 +8,16 @@ import ServiceCard from '../../CustomComponents/ServiceCard'
 import { RxGlobe } from 'react-icons/rx';
 import { TfiBasketball } from 'react-icons/tfi'
 import { TfiLinux } from 'react-icons/tfi'
+import { Helmet } from 'react-helmet'
 
 const About = () => {
   let iconStyle = { color: '#2a1fbc' }
   return (
     <>
-
+<Helmet>
+                <title>Excellent softwares || About Page </title>
+                <meta name="About Page" content="About page content" />
+            </Helmet>
       <section id="about" className="about">
         <div className='inner-page-header section-padding style-dark' style={{padding:' 60px 0px'}}>
           <div className="container" data-aos="fade-up">
@@ -68,23 +72,23 @@ const About = () => {
               <ServiceCard
                 icon={<RxGlobe size={80} />}
                 heading='Our Responsibility'
-                about='Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris.'
+                about='At Excellent Softwares, we embrace our responsibility to make a positive difference in the world. Through our actions and initiatives, we aim to create value not only for our clients and employees but also for society as a whole. We are committed to being a force for good, driving positive change, and leaving a lasting legacy of excellence and impact'
                 onClick={() => { }} />
             </div>
 
             <div className="col-xl-4 col-md-6 mt-4 mt-xl-0 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
               <ServiceCard
                 icon={<TfiBasketball size={80} />}
-                heading='Our Approach'
-                about='Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris.'
+                heading='Mission'
+                about='At Excellent Softwares, our mission is to pioneer the development of next-generation business solutions for entrepreneurs and SMEs. We are dedicated to delivering unparalleled mobile experiences, prioritizing quality, speed, and pixel perfection in every solution we create. Through innovative technologies and a deep commitment to customer satisfaction, we strive to empower our clients to achieve their goals and drive success in their ventures.'
                 onClick={() => { }} />
             </div>
 
             <div className="col-xl-4 col-md-6 mt-4 mt-xl-0 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
               <ServiceCard
                 icon={<TfiLinux size={80} />}
-                heading='Our Mission, Vision'
-                about='Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris.'
+                heading='Our Vision'
+                about='Excellent Softwares envisions becoming the indispensable partner for every visionary individual and entrepreneur aiming to revolutionize the world with their ideas. We aspire to be the catalyst that transforms ideas into reality, offering unmatched expertise and customized solutions tailored to meet the unique needs of our clients. Our objective is to be the trusted choice for those seeking to harness the power of technology to realize their dreams, guiding them on their journey towards innovation and excellence.'
                 onClick={() => { }} />
             </div>
           </div>
